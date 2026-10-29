@@ -1,0 +1,23 @@
+name: CalorieCounter
+options:
+  bundleIdPrefix: com.ufuk
+  deploymentTarget:
+    iOS: "17.0"
+targets:
+  CalorieCounter:
+    type: application
+    platform: iOS
+    sources: [CalorieCounter]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ufuk.CalorieCounter
+        SWIFT_VERSION: "5.0"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_NSCameraUsageDescription: "Yemeğinin fotoğrafını çekip kalorisini hesaplamak için kameraya erişim gerekiyor."
+        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: "Galeriden yemek fotoğrafı seçmek için erişim gerekiyor."
+    info:
+      path: CalorieCounter/Info.plist
+      properties:
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
